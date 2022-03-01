@@ -1,5 +1,5 @@
 # Time-Series-Prediction-with-TensorFlow
-A series of different Time Series modellings experiments with various models to predict Bitcoin price
+A series of different Time Series modelings experiments with various models to predict Bitcoin price
 
 
 
@@ -11,7 +11,9 @@ A series of different Time Series modellings experiments with various models to 
   * [The Problem](#the-problem)
   * [Goal](#goal)
   * [Project Main Steps](#project-main-steps)
+  * [Data Visualization](#data-visualization)
   * [Modeling](#modeling)
+  * [Prediction](#prediction)
   * [Conclusion](#conclusion)
   * [Software and Libraries](#software-and-libraries)
 
@@ -42,6 +44,13 @@ This project focuses on the accurate prediction of cryptocurrencies price using 
 * Making predictions (forecasts) with a time series model
 * Creating prediction intervals for time series model forecasts
 
+## Data Visualization
+
+Price of Bitcoin from 4 November 2014 to 2 Feb 2022           | Price of Bitcoin from 4 November 2014 to 2 Feb 2022 Train&Test 
+:-------------------------:|:-------------------------:
+![](https://github.com/docum5/Time-series-forecasting-in-TensorFlow-Bitcoin-Price-Prediction-/blob/main/visualisasi1.png)  | ![](https://github.com/docum5/Time-series-forecasting-in-TensorFlow-Bitcoin-Price-Prediction-/blob/main/visualisasi2.png)
+
+
 ## Modeling
 
 ```
@@ -62,13 +71,19 @@ Data -> Format data for a time series problem -> build a model -> Evaluating -> 
 | model_9_ensemble                                                      | 1157.829346 | 2824341.75  | 1680.577759 | 2.891772 | 1.024302 |
 
 
-Comparing the Performance of Each of Our Models           | Comparing the Performance by F1-score
+Comparing the Performance by mae of Each of Our Models          
+:-------------------------:
+![](https://github.com/docum5/Time-series-forecasting-in-TensorFlow-Bitcoin-Price-Prediction-/blob/main/maeconclusion.png) 
+
+## Prediction
+
+Prediction of bitcoin price with interval values         | Price of Bitcoin Prediction to Future 
 :-------------------------:|:-------------------------:
-![](https://github.com/docum5/Natural-Language-Processing-with-TensorFlow/blob/main/Screen%20Shot%202022-01-07%20at%2011.30.23.png?raw=true)  | ![](https://github.com/docum5/Natural-Language-Processing-with-TensorFlow/blob/main/Screen%20Shot%202022-01-07%20at%2011.29.53.png?raw=true)
+![](https://github.com/docum5/Time-series-forecasting-in-TensorFlow-Bitcoin-Price-Prediction-/blob/main/forecast%20w:%20interval.png?raw=true)  | ![](https://github.com/docum5/Time-series-forecasting-in-TensorFlow-Bitcoin-Price-Prediction-/blob/main/prediction%20to%20future.png?raw=true)
 
 
 ## Conclusion
-In this capstone project, I took a Kaggle challenge to classify tweets into disaster tweets in real or not?. First, I have analyzed and explored all the provided tweets data to visualize the statistical and other properties of the presented data. Next, I performed some exploratory analysis of the data to check the type of the data, whether there are unwanted features and if features have missing data. Based on the analysis, I decided to drop the "location" and "keyword" column since it has most of the data missing and really has no effect on the classification of tweets. The 'text' columns are all text data along with alphanumeric, special characters, and embedded URLs.The 'text' column data needs to be cleaned, pre-processed and vectorized before using a machine-learning algorithm to classify the tweets. After pre-processing the train and test data, the data was vectorized using CountVectorizer and TFIDF features. Then it was split into training and validation data, and then various classifiers were fit on the data, and predictions were made. Out of all classifiers tested, tf_hub_sentence_encoder(using pre-trained embedding universal sentence encoder) performed the best with the test accuracy of 81,1%. The second best choice model is Naive Bayes, with a test accuracy of 79,2%.
+In this capstone project, I took Bitcoin prices from [CoinDesk](https://www.coindesk.com/price/bitcoin/), analyzed them, applied various models to fit the data, and forecasted the models. The predictions we have made here are not financial advice. Furthermore, by now, we should be well aware of just how poor machine learning models can be at forecasting values in an open system - anyone promising you a model which can "beat the market" is likely trying to scam you, oblivious to their errors or very lucky.
 
 
 ## Software and Libraries
@@ -78,5 +93,5 @@ This project uses the following software and Python libraries:
 
 ![](https://forthebadge.com/images/badges/made-with-python.svg)
 
-[<img target="_blank" src="https://upload.wikimedia.org/wikipedia/commons/thumb/0/05/Scikit_learn_logo_small.svg/2560px-Scikit_learn_logo_small.svg.png" width=100>](https://flask.palletsprojects.com/en/1.1.x/) [<img target="_blank" src="https://upload.wikimedia.org/wikipedia/commons/thumb/3/31/NumPy_logo_2020.svg/440px-NumPy_logo_2020.svg.png" width=150>](https://numpy.org/) [<img target="_blank" src="https://upload.wikimedia.org/wikipedia/commons/thumb/e/ed/Pandas_logo.svg/1024px-Pandas_logo.svg.png" width=200>](https://pandas.pydata.org/docs/getting_started/index.html) [<img target="_blank" src="https://camo.githubusercontent.com/aeb4f612bd9b40d81c62fcbebd6db44a5d4344b8b962be0138817e18c9c06963/68747470733a2f2f7777772e74656e736f72666c6f772e6f72672f696d616765732f74665f6c6f676f5f686f72697a6f6e74616c2e706e67" width=200>](https://www.tensorflow.org/) [<img target="_blank" src="https://matplotlib.org/stable/_static/logo2.svg" width=100 height=50>](https://matplotlib.org/)
+[<img target="_blank" src="https://upload.wikimedia.org/wikipedia/commons/thumb/3/31/NumPy_logo_2020.svg/440px-NumPy_logo_2020.svg.png" width=150>](https://numpy.org/) [<img target="_blank" src="https://upload.wikimedia.org/wikipedia/commons/thumb/e/ed/Pandas_logo.svg/1024px-Pandas_logo.svg.png" width=200>](https://pandas.pydata.org/docs/getting_started/index.html) [<img target="_blank" src="https://camo.githubusercontent.com/aeb4f612bd9b40d81c62fcbebd6db44a5d4344b8b962be0138817e18c9c06963/68747470733a2f2f7777772e74656e736f72666c6f772e6f72672f696d616765732f74665f6c6f676f5f686f72697a6f6e74616c2e706e67" width=200>](https://www.tensorflow.org/) [<img target="_blank" src="https://matplotlib.org/stable/_static/logo2.svg" width=100 height=50>](https://matplotlib.org/)
 
